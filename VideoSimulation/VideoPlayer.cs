@@ -8,15 +8,15 @@ namespace VideoSimulation
 {
     public class VideoPlayer : IOperate
     {
-        public int id { get; set; }
-        public void Play()
+
+        public string Play()
         {
-            id = 1;
+            return "VHS is playing";
         }
 
-        public void Stop()
+        public string Stop()
         {
-            id = 0;
+            return "VHS has stopped";
         }
     }
 }
