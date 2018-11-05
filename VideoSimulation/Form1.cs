@@ -12,6 +12,7 @@ namespace VideoSimulation
 {
     public partial class Form1 : Form
     {
+        IOperate function;
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +31,16 @@ namespace VideoSimulation
 
             button5.Text = "Play";
             button6.Text = "Stop";
+
+            function = new VideoPlayer();
+            button1.Click += new EventHandler(Play);
+            button3.Click += new EventHandler(Play);
+            button5.Click += new EventHandler(Play);
+        }
+
+        private void Play(object sender, EventArgs e)
+        {
+            
         }
     }
 }

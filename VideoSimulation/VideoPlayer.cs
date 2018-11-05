@@ -8,14 +8,15 @@ namespace VideoSimulation
 {
     public class VideoPlayer : IOperate
     {
+        public int id { get; set; }
         public void Play()
         {
-            throw new NotImplementedException();
+            id = 1;
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            id = 0;
         }
     }
 }
