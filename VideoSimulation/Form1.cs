@@ -36,13 +36,27 @@ namespace VideoSimulation
             button6.Text = "Stop";
 
 
+            DVD = new DVD();
             VHS = new VideoPlayer();
             BluRay = new Bluray();
-
+            
             button1.Click += new EventHandler(PlayingVHS);
             button2.Click += new EventHandler(StoppedVHS);
             button6.Click += new EventHandler(PlayingBluRay);
             button5.Click += new EventHandler(StopBluRay);
+            button3.Click += new EventHandler(PlayDVD);
+            button4.Click += new EventHandler(StopDVD);
+        }
+
+        private void PlayDVD(object sender,EventArgs e)
+        {
+            label5.Text = DVD.Play();
+
+        }
+
+        private void StopDVD(object sender,EventArgs e)
+        {
+            label5.Text = DVD.Stop();
         }
 
         private void StoppedVHS(object sender, EventArgs e)
