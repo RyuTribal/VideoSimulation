@@ -30,6 +30,23 @@ namespace VideoSimulation
 
             button5.Text = "Play";
             button6.Text = "Stop";
+
+            DVD = new VideoPlayer();
+
+            button3.Click += new EventHandler(PlayDVD);
+            button4.Click += new EventHandler(StopDVD);
         }
+
+        private void PlayDVD(object sender,EventArgs e)
+        {
+            label5.Text = DVD.Play();
+
+        }
+
+        private void StopDVD(object sender,EventArgs e)
+        {
+            label5.Text = DVD.Stop();
+        }
+
     }
 }

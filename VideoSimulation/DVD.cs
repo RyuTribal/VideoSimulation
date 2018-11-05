@@ -9,17 +9,17 @@ namespace VideoSimulation
    
     public class DVD : IOperate
     {
-        public int id { get; set; }
+        
 
-        public void Play()
+        public string Play()
         {
-            id = 2;
+            return "DVD is playing";
             
         }
 
-        public void Stop()
+        public string Stop()
         {
-            id = 3;
+            return "DVD has stopped smoking";
             
         }
     }
