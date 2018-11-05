@@ -18,6 +18,9 @@ namespace VideoSimulation
             label1.Text = "VIDEO";
             label2.Text = "DVD";
             label3.Text = "BLUERAY";
+            label4.Text = "Not playing";
+            label5.Text = "Not playing";
+            label6.Text = "Not playing";
 
             button1.Text = "Play";
             button2.Text = "Stop";
@@ -27,6 +30,8 @@ namespace VideoSimulation
 
             button5.Text = "Play";
             button6.Text = "Stop";
+
+
         }
     }
 }
