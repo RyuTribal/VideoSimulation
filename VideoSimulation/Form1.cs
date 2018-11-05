@@ -15,6 +15,18 @@ namespace VideoSimulation
         public Form1()
         {
             InitializeComponent();
+            label1.Text = "VIDEO";
+            label2.Text = "DVD";
+            label3.Text = "BLUERAY";
+
+            button1.Text = "Play";
+            button2.Text = "Stop";
+
+            button3.Text = "Play";
+            button4.Text = "Stop";
+
+            button5.Text = "Play";
+            button6.Text = "Stop";
         }
     }
 }
