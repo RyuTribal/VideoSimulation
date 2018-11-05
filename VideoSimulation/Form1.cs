@@ -12,12 +12,16 @@ namespace VideoSimulation
 {
     public partial class Form1 : Form
     {
+        IOperate VHS;
+        IOperate DVD;
+        IOperate BluRay;
+        public int switcher;
         public Form1()
         {
             InitializeComponent();
             label1.Text = "VIDEO";
             label2.Text = "DVD";
-            label3.Text = "BLUERAY";
+            label3.Text = "BLURAY";
             label4.Text = "Not playing";
             label5.Text = "Not playing";
             label6.Text = "Not playing";
@@ -31,8 +35,13 @@ namespace VideoSimulation
             button5.Text = "Play";
             button6.Text = "Stop";
 
-            DVD = new VideoPlayer();
 
+            DVD = new VideoPlayer();
+            VHS = new VideoPlayer();
+            BluRay = new Bluray();
+            
+            button1.Click += new EventHandler(PlayingVHS);
+            button2.Click += new EventHandler(StoppedVHS);
             button3.Click += new EventHandler(PlayDVD);
             button4.Click += new EventHandler(StopDVD);
         }
@@ -46,6 +55,29 @@ namespace VideoSimulation
         private void StopDVD(object sender,EventArgs e)
         {
             label5.Text = DVD.Stop();
+
+        }
+
+        private void StoppedVHS(object sender, EventArgs e)
+        {
+            label4.Text = VHS.Stop();
+        }
+
+        private void PlayingVHS(object sender, EventArgs e)
+        {
+            label4.Text = VHS.Play();          
+            
+        }
+
+        private void StopBluRay(object sender, EventArgs e)
+        {
+            label6.Text = BluRay.Play();
+
+        }
+
+        private void PlayingBluRay(object sender, EventArgs e)
+        {
+            label6.Text = BluRay.Stop();
         }
 
     }

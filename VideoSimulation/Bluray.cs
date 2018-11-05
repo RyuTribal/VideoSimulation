@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace VideoSimulation
 {
-    public class VideoPlayer : IOperate
+    class Bluray : IOperate
     {
-
+        
         public string Play()
         {
-            return "VHS is playing";
+            return "BluRay is playing";   
         }
 
         public string Stop()
         {
-            return "VHS has stopped";
+            return "BluRay stopped playing";
         }
     }
 }
