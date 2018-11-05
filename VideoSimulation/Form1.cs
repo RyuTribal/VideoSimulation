@@ -41,6 +41,8 @@ namespace VideoSimulation
 
             button1.Click += new EventHandler(PlayingVHS);
             button2.Click += new EventHandler(StoppedVHS);
+            button6.Click += new EventHandler(PlayingBluRay);
+            button5.Click += new EventHandler(StopBluRay);
         }
 
         private void StoppedVHS(object sender, EventArgs e)
