@@ -32,15 +32,25 @@ namespace VideoSimulation
             button5.Text = "Play";
             button6.Text = "Stop";
 
-            function = new VideoPlayer();
-            button1.Click += new EventHandler(Play);
-            button3.Click += new EventHandler(Play);
-            button5.Click += new EventHandler(Play);
-        }
 
-        private void Play(object sender, EventArgs e)
-        {
+            BluRay = new Bluray();
+            
+            button1.Click += new EventHandler(Playing);
+            button3.Click += new EventHandler(Playing);
+            button5.Click += new EventHandler(PlayingBluRay);
+            button6.Click += new EventHandler(StopBluRay);
             
         }
+
+        private void StopBluRay(object sender, EventArgs e)
+        {
+            label6.Text = Bluray.Play();
+        }
+
+        private void PlayingBluRay(object sender, EventArgs e)
+        {
+            label6.Text = Bluray.Stop();
+        }
+
     }
 }
