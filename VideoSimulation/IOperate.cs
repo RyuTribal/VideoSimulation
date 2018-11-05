@@ -8,7 +8,7 @@ namespace VideoSimulation
 {
     public interface IOperate
     {
-        void Play();
-        void Stop();
+        string Play();
+        string Stop();
     }
 }
